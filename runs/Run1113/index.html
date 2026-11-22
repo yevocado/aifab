@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Run1113 — Night Cable</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  /* Tweaks: 포인트 컬러 */
+  :root { --accent: #f620f0; --accent2: #ff7a8a; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+  .board { position: relative; width: 1080px; height: 1920px; overflow: hidden;
+    font-family: 'Noto Sans KR', sans-serif; color: #fff; }
+  .photo { position: absolute; inset: 0; background: url(photo.jpg) center/cover; }
+  .shade { position: absolute; inset: 0; background:
+    linear-gradient(180deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.6) 26%, rgba(0,0,0,.15) 38%, rgba(0,0,0,0) 48%,
+                    rgba(0,0,0,.35) 66%, rgba(0,0,0,.88) 84%, #000 100%); }
+  svg.lines { position: absolute; inset: 0; }
+
+  .top { position: absolute; left: 80px; top: 110px; right: 80px;
+    display: flex; gap: 28px; align-items: baseline;
+    font-size: 30px; letter-spacing: .18em; font-weight: 700; }
+  .top .name { color: var(--accent); }
+  .top .date { font-family: 'Anton'; font-weight: 400; letter-spacing: .08em; font-size: 34px; }
+
+  .dist { position: absolute; left: 64px; top: 250px; transform: rotate(-7deg); transform-origin: left bottom; }
+  .dist .num { font-family: 'Anton'; font-size: 400px; line-height: .9; letter-spacing: -4px;
+    text-shadow: 0 6px 40px rgba(0,0,0,.35); }
+  .dist .unit { font-family: 'Anton'; font-size: 88px; color: var(--accent); letter-spacing: 6px;
+    margin-left: 14px; vertical-align: top; }
+
+  .stats { position: absolute; left: 80px; right: 80px; bottom: 250px;
+    display: grid; grid-template-columns: 1.25fr 1.1fr 1fr; align-items: end; gap: 20px; }
+  .stat .v { font-family: 'Anton'; line-height: 1; }
+  .stat .l { margin-top: 14px; font-size: 26px; font-weight: 700; letter-spacing: .1em; color: rgba(255,255,255,.82); }
+  .s1 .v { font-size: 132px; }
+  .s2 .v { font-size: 110px; }
+  .s3 .v { font-size: 92px; }
+  .s3 .v small { font-size: 40px; color: var(--accent2); margin-left: 6px; }
+  .rule { position: absolute; left: 80px; right: 80px; bottom: 210px; height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+
+  .foot { position: absolute; left: 80px; right: 80px; bottom: 120px;
+    display: flex; justify-content: space-between; font-size: 28px; font-weight: 700;
+    letter-spacing: .08em; color: rgba(255,255,255,.88); }
+  .foot b { font-family: 'Anton'; font-weight: 400; color: #fff; letter-spacing: .06em; }
+  .foot .type { color: var(--accent2); letter-spacing: .2em; }
+</style>
+</head>
+<body>
+<div class="board" id="Run1113">
+  <div class="photo"></div>
+  <div class="shade"></div>
+
+  <!-- 사진 속 케이블 각도를 이어받은 사선 -->
+  <svg class="lines" viewBox="0 0 1080 1920">
+    <defs>
+      <linearGradient id="g" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="var(--accent2)" stop-opacity="0"/>
+        <stop offset="1" stop-color="var(--accent2)" stop-opacity=".9"/>
+      </linearGradient>
+    </defs>
+    <line x1="-40" y1="1210" x2="560" y2="860" stroke="url(#g)" stroke-width="4"/>
+    <line x1="-40" y1="1260" x2="560" y2="910" stroke="url(#g)" stroke-width="2"/>
+  </svg>
+
+  <div class="top">
+    <span class="name">NIGHT CABLE</span>
+    <span class="date">2026.11.13 FRI</span>
+  </div>
+
+  <div class="dist"><span class="num">8.06</span><span class="unit">KM</span></div>
+
+  <div class="stats">
+    <div class="stat s1"><div class="v">47:10</div><div class="l">운동 시간</div></div>
+    <div class="stat s2"><div class="v">5'51"</div><div class="l">페이스 /KM</div></div>
+    <div class="stat s3"><div class="v">176<small>BPM</small></div><div class="l">심박</div></div>
+  </div>
+  <div class="rule"></div>
+
+  <div class="foot">
+    <span class="type">TEMPO RUN</span>
+    <span><b>18:04 – 18:52</b> · 180 SPM · SEOUL</span>
+  </div>
+</div>
+</body>
+</html>
