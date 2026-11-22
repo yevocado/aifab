@@ -2,6 +2,7 @@
 
 러닝 사진과 운동 기록 캡처를 받으면 그날 런에 맞춘 인스타 스토리용 인증샷(1080×1920px)을 만들어
 "러닝 인증샷 템플릿" 캔버스에 새 아트보드로 추가한다. 전체 요구사항: [`docs/REQUIREMENTS.md`](docs/REQUIREMENTS.md)
+디자인 판단 기준(레퍼런스 분석, 사진 읽는 법, 레이아웃 라이브러리): [`docs/DESIGN-GUIDE.md`](docs/DESIGN-GUIDE.md)
 
 ## 작업 순서
 
