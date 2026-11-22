@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Run1113 — Night Cable (D)</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* Tweaks: 포인트 컬러 */
+  :root { --accent: #f620f0; --accent2: #ff8fa0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+  .board { position: relative; width: 1080px; height: 1920px; overflow: hidden;
+    font-family: 'Noto Sans KR', sans-serif; color: #fff; }
+  .photo { position: absolute; inset: 0; background: url(photo.jpg) center/cover;
+    filter: contrast(1.12) saturate(1.3) brightness(.86); }
+  /* 주탑만 잘라 숫자 위로 — 숫자가 다리 뒤에 있는 것처럼 */
+  .tower { clip-path: polygon(590px 764px, 660px 758px, 476px 1921px, 341px 1921px); }
+  .shade { position: absolute; inset: 0; background:
+    linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 62%, rgba(0,0,0,.55) 100%); }
+  .ts { text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+
+  .date { position: absolute; left: 76px; top: 120px; font-size: 34px; font-weight: 700; }
+  .date span { display: block; margin-top: 6px; font-size: 26px; font-weight: 400; opacity: .9; }
+
+  .num { position: absolute; left: 44px; top: 560px; font-family: 'Anton'; font-size: 470px; line-height: 1;
+    letter-spacing: -4px; transform: skewX(-9deg); }
+  .numlabel { position: absolute; left: 92px; top: 1010px; font-size: 30px; font-weight: 500; }
+
+  .grid { position: absolute; left: 640px; right: 60px; bottom: 150px;
+    display: grid; grid-template-columns: 1fr 1fr; row-gap: 44px; column-gap: 24px; }
+  .grid .full { grid-column: span 2; }
+  .grid .v { font-family: 'Anton'; line-height: 1; }
+  .grid .l { margin-top: 10px; font-size: 24px; font-weight: 500; opacity: .92; }
+  .big .v { font-size: 92px; } .mid .v { font-size: 80px; } .sm .v { font-size: 68px; }
+  .grid .v small { font-size: .5em; margin-left: 4px; }
+  .grid .v.hl { color: var(--accent2); }
+</style>
+</head>
+<body>
+<div class="board" id="Run1113">
+  <div class="photo"></div>
+  <div class="shade"></div>
+
+  <div class="date ts">11월 13일 금요일<span>오후 6:04 – 6:52 · 템포런</span></div>
+
+  <div class="num ts">8.06</div>
+  <div class="numlabel ts">킬로미터</div>
+
+  <div class="photo tower"></div>
+
+  <div class="grid ts">
+    <div class="big full"><div class="v">47:10</div><div class="l">운동 시간</div></div>
+    <div class="mid full"><div class="v">5'51"</div><div class="l">평균 페이스</div></div>
+    <div class="sm"><div class="v hl">176</div><div class="l">심박수</div></div>
+    <div class="sm"><div class="v">180</div><div class="l">케이던스</div></div>
+  </div>
+</div>
+</body>
+</html>
